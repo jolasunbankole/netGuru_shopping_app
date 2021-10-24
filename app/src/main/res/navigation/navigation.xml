@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/shoppingListFragment">
+
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.example.netguru_shopping.ui.ShoppingListFragment"
+        android:label="fragment_shopping_list"
+        tools:layout="@layout/fragment_shopping_list" >
+        <action
+            android:id="@+id/action_shoppingListFragment_to_shoppingListDetails"
+            app:destination="@id/shoppingListDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingArchivedFragment"
+        android:name="com.example.netguru_shopping.ui.ShoppingArchivedFragment"
+        android:label="fragment_shopping_archived"
+        tools:layout="@layout/fragment_shopping_archived" />
+    <fragment
+        android:id="@+id/shoppingListDetails"
+        android:name="com.example.netguru_shopping.ui.ShoppingListDetails"
+        android:label="fragment_shopping_list_details"
+        tools:layout="@layout/fragment_shopping_list_details" >
+        <action
+            android:id="@+id/action_shoppingListDetails_to_shoppingArchivedFragment"
+            app:destination="@id/shoppingArchivedFragment" />
+    </fragment>
+</navigation>

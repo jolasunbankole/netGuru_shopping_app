@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Netguru_Shopping</string>
+    <string name="shoppingList">Shopping List</string>
+    <string name="Addingcart" />
+    <string name="remove">remove</string>
+    <string name="add">Add</string>
+    <string name="arrow">arrow</string>
+
+
+</resources>

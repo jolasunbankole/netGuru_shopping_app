@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".ui.ShoppingListDetails">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="5dp"
+            tools:listitem="@layout/list_item2"
+            app:layoutManager="LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add"
+                android:src="@drawable/add_shopping"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/add"
+                android:onClick="insertItem2"
+                tools:ignore="UsingOnClickInXml" />
+
+
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/remove"
+                android:src="@drawable/remove_shopping"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/remove"
+                android:onClick="removeItem2"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>
