@@ -8,5 +8,7 @@ class SharedViewModel : ViewModel() {
 
     private var _shoppingList = MutableLiveData<ShoppingListData>()
     val shoppingList: LiveData<ShoppingListData> = _shoppingList
+
 }
+
 

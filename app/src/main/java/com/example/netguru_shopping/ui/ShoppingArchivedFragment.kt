@@ -29,7 +29,7 @@ class ShoppingArchivedFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shopping_archived, container, false)
         sharedViewModel.shoppingList.observe(viewLifecycleOwner) {
-            binding.recyclerView3
+            binding.recyclerView2
         }
         return binding.root
 
