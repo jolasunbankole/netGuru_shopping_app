@@ -56,7 +56,6 @@ class ShoppingAdapter(
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         val itemView2 = LayoutInflater.from(parent.context).inflate(R.layout.list_item2, parent, false)
         return ShoppingListViewHolder(itemView, itemView2)
-        listener
 
 
     }
