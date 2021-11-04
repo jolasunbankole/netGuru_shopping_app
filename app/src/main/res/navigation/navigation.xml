@@ -13,22 +13,12 @@
         <action
             android:id="@+id/action_shoppingListFragment_to_shoppingListDetails"
             app:destination="@id/shoppingListDetails" />
-        <action
-            android:id="@+id/action_shoppingListFragment_to_shoppingArchivedFragment"
-            app:destination="@id/shoppingArchivedFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingArchivedFragment"
         android:name="com.example.netguru_shopping.ui.ShoppingArchivedFragment"
         android:label="fragment_shopping_archived"
-        tools:layout="@layout/fragment_shopping_archived" >
-        <action
-            android:id="@+id/action_shoppingArchivedFragment_to_shoppingListDetails"
-            app:destination="@id/shoppingListDetails" />
-        <action
-            android:id="@+id/action_shoppingArchivedFragment_to_shoppingListFragment"
-            app:destination="@id/shoppingListFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_shopping_archived" />
     <fragment
         android:id="@+id/shoppingListDetails"
         android:name="com.example.netguru_shopping.ui.ShoppingListDetails"

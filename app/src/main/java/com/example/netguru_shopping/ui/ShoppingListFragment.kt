@@ -13,10 +13,12 @@ import com.example.netguru_shopping.shareviewmodel.SharedViewModel
 
 
 class ShoppingListFragment : Fragment() {
-
     private var _binding: FragmentShoppingListBinding? = null
     private val binding get() = _binding!!
     private val sharedViewModel: SharedViewModel by activityViewModels()
+
+
+
 
 
 
@@ -26,9 +28,11 @@ class ShoppingListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shopping_list, container, false)
-        sharedViewModel.shoppingList.observe(viewLifecycleOwner) { binding.recyclerView1 }
-        return binding.root
+        sharedViewModel.shoppingList.observe(viewLifecycleOwner) {binding.recyclerView1 }
+        //floatingActionButton
+        binding.floatingActionButton
 
+        return binding.root
 
     }
 
@@ -37,7 +41,7 @@ class ShoppingListFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding
     }
 
 
