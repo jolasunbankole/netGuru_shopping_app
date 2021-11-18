@@ -14,8 +14,8 @@ import com.example.netguru_shopping.shareviewmodel.SharedViewModel
 
 class ShoppingArchivedFragment : Fragment() {
 
-    private var _binding: FragmentShoppingArchivedBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var _binding: FragmentShoppingArchivedBinding
+    private val binding get() = _binding
 
     private val sharedViewModel: SharedViewModel by activityViewModels()
 
@@ -29,7 +29,7 @@ class ShoppingArchivedFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shopping_archived, container, false)
         sharedViewModel.shoppingList.observe(viewLifecycleOwner) {
-            binding.recyclerView2
+
         }
         return binding.root
 
@@ -37,7 +37,7 @@ class ShoppingArchivedFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        _binding
     }
 
 

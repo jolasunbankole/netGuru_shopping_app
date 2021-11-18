@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="com.example.netguru_shopping.MainActivity" />
+            name="nexModel"
+            type="com.example.netguru_shopping.ui.ShoppingListFragment" />
 
     </data>
 
@@ -23,6 +23,7 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:padding="5dp"
+            android:layout_above="@+id/Buttons"
             tools:listitem="@layout/list_item2"
             app:layoutManager="LinearLayoutManager" />
 
@@ -32,30 +33,41 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
 
-            <ImageButton
+            <Button
+                android:id="@+id/insertItem2"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_margin="4dp"
                 android:text="@string/add"
-                android:src="@drawable/add_shopping"
-                android:layout_margin="4dp"
-                android:contentDescription="@string/add"
-                android:onClick="@{() -> viewModel.insertItem2()}"/>
+                style="?android:attr/buttonBarButtonStyle" />
 
 
 
-            <ImageButton
+            <Button
+                android:id="@+id/removeItem2"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/remove"
-                android:src="@drawable/remove_shopping"
                 android:layout_margin="4dp"
-                android:contentDescription="@string/remove"
-                android:onClick="@{() -> viewModel.removeItem2()}"/>
+                android:text="@string/remove"
+                style="?android:attr/buttonBarButtonStyle" />
+
         </LinearLayout>
 
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ofloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="325dp"
+            android:layout_marginBottom="61dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/nextpage"
+            android:focusable="true"
+            android:contentDescription="@string/arrow" />
 
 
     </RelativeLayout>

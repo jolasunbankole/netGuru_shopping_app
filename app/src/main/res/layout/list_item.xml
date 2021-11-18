@@ -9,7 +9,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/cardView"
     android:layout_margin="6dp">
 
 
@@ -42,15 +41,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="12dp"
-            tools:text="@string/shoppingList"
+            android:text="@string/shoppingList"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:layout_marginStart="100dp"/>
 
 
 
 
+
+
     </LinearLayout>
+
+
+
+
+
 </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 
 

@@ -14,18 +14,19 @@
             android:id="@+id/action_shoppingListFragment_to_shoppingListDetails"
             app:destination="@id/shoppingListDetails" />
     </fragment>
-    <fragment
-        android:id="@+id/shoppingArchivedFragment"
-        android:name="com.example.netguru_shopping.ui.ShoppingArchivedFragment"
-        android:label="fragment_shopping_archived"
-        tools:layout="@layout/fragment_shopping_archived" />
+
     <fragment
         android:id="@+id/shoppingListDetails"
         android:name="com.example.netguru_shopping.ui.ShoppingListDetails"
         android:label="fragment_shopping_list_details"
-        tools:layout="@layout/fragment_shopping_list_details" >
+        tools:layout="@layout/fragment_shopping_list_details">
         <action
             android:id="@+id/action_shoppingListDetails_to_shoppingArchivedFragment"
             app:destination="@id/shoppingArchivedFragment" />
     </fragment>
+        <fragment
+            android:id="@+id/shoppingArchivedFragment"
+            android:name="com.example.netguru_shopping.ui.ShoppingArchivedFragment"
+            android:label="fragment_shopping_archived"
+            tools:layout="@layout/fragment_shopping_archived"/>
 </navigation>

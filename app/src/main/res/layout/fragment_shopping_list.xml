@@ -6,9 +6,11 @@
         <data>
                 <variable
                     name="viewModel"
-                    type="com.example.netguru_shopping.MainActivity" />
+                    type="com.example.netguru_shopping.ui.ShoppingListFragment" />
 
         </data>
+
+
 
 <RelativeLayout
     android:id="@+id/rlayout"
@@ -16,6 +18,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".ui.ShoppingListFragment">
+
+
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -29,31 +33,38 @@
             tools:listitem="@layout/list_item" />
 
 
+
         <LinearLayout
             android:id="@+id/addsubBts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true">
 
-                <ImageButton
+
+
+                <Button
+                    android:id="@+id/addItem"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/add"
-                    android:onClick="@{() -> viewModel.insertItem()}"
-                    android:src="@drawable/add_shopping"
-                    android:text="@string/add" />
+                    android:text="@string/add"
+                    style="?android:attr/buttonBarButtonStyle" />
 
-                <ImageButton
+                <Button
+                    android:id="@+id/removeItem"
+                    android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/remove"
-                    android:src="@drawable/remove_shopping"
                     android:layout_margin="4dp"
                     android:contentDescription="@string/remove"
-                    android:onClick="@{() -> viewModel.removeItem()}"/>
+                    android:text="@string/remove"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+
         </LinearLayout>
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -64,10 +75,9 @@
     android:layout_marginStart="325dp"
     android:layout_marginBottom="61dp"
     android:clickable="true"
-    app:srcCompat="@drawable/adding"
+    app:srcCompat="@drawable/nextpage"
     android:focusable="true"
-    android:contentDescription="@string/arrow"
-    android:onClick="@{() -> viewModel.nextPage()}"/>
+    android:contentDescription="@string/arrow" />
 
 
 </RelativeLayout>
